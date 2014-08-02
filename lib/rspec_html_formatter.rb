@@ -16,9 +16,9 @@ class Oopsy
     @file_path = file_path
     unless @exception.nil?
       @klass = @exception.class
-      @message = @exception.message
+      @message = @exception.message.encode('utf-8')
       @backtrace = @exception.backtrace
-      @backtrace_message = @backtrace.select { |r| r.match(@file_path) }.join('')
+      @backtrace_message = @backtrace.select { |r| r.match(@file_path) }.join('').encode('utf-8')
       @highlighted_source = process_source
       @explanation = process_message
     end
@@ -48,38 +48,6 @@ class Oopsy
   end
 
 end
-
-# class Specify
-#
-#   attr_reader :detail
-#
-#   def initialize(example)
-#     @example = example
-#     @detail = process_detail
-#     has_specification?
-#   end
-#
-#   private
-#
-#   def has_specification?
-#      start_line = @example.metadata[:line_number]
-#      lines = File.readlines(@example.file_path)
-#      code_lines = []
-#      lines.each_with_index do |l,i|
-#        code_lines << l if i >= start_line.to_i
-#        break if l.match(/end\n/)
-#      end
-#      p code_lines
-#   end
-#
-#   def process_detail
-#     source = "Given some stuff\nWhen I do it\nThen all is great"
-#     formatter = Rouge::Formatters::HTML.new(css_class: 'highlight')
-#        lexer = Rouge::Lexers::Gherkin.new
-#        formatter.format(lexer.lex(source))
-#   end
-#
-# end
 
 class Example
 
@@ -178,14 +146,6 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
   def example_pending(example)
     @group_example_pending_count += 1
     @group_examples << Example.new(example)
-  end
-
-  def dump_summary(duration, example_count, failure_count, pending_count)
-    # All examples total summary
-    # p @duration = duration
-    # p @example_count = example_count
-    # p @failure_count = failure_count
-    # p @pending_count = pending_count
   end
 
   def example_group_finished(example_group)

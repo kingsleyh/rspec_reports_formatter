@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="199a381f-a9d9-4f90-a9ad-740dfdff291e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rspec_html_formatter.rb" afterPath="$PROJECT_DIR$/lib/rspec_html_formatter.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rspec_html_formatter.iws" />
@@ -27,8 +32,8 @@
       <file leaf-file-name="rspec_html_formatter.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rspec_html_formatter.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3135" max-vertical-offset="4185">
-              <caret line="250" column="52" selection-start-line="250" selection-start-column="52" selection-end-line="250" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3585">
+              <caret line="20" column="95" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -44,23 +49,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="number_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.4/lib/active_support/number_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.884615" vertical-offset="2246" max-vertical-offset="5280">
-              <caret line="179" column="44" selection-start-line="179" selection-start-column="7" selection-end-line="179" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="report.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/report.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-17.125" vertical-offset="2094" max-vertical-offset="2865">
               <caret line="167" column="37" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="37" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1407008771000" expanded="true" signature="31:5631" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="38:967" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="456:641" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="836:959" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="846:882" placeholder="{...}" />
+                <marker date="1407008771000" expanded="true" signature="974:5623" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="998:4707" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1040:1882" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1062:1873" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1092:1862" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1128:1849" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1174:1834" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1214:1587" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1338:1503" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1673:1816" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1715:1797" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1903:2021" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1931:2012" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="1969:1983" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2042:2771" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2070:2401" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2111:2389" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2202:2376" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2429:2761" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2470:2749" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2561:2736" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2792:4699" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2821:4690" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2877:4678" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2893:3039" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="2906:3022" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3055:4663" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3094:4644" placeholder="do ... end" />
+                <marker date="1407008771000" expanded="true" signature="3128:4628" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3181:4470" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3203:3781" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3226:3756" placeholder="if ... end" />
+                <marker date="1407008771000" expanded="true" signature="3321:3647" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3373:3492" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3541:3618" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3803:4450" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3826:4425" placeholder="if ... end" />
+                <marker date="1407008771000" expanded="true" signature="3909:4398" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="3961:4078" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="4127:4369" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="4740:5613" placeholder="..." />
+                <marker date="1407008771000" expanded="true" signature="4834:4950" placeholder="[...]" />
               </folding>
             </state>
           </provider>
@@ -72,18 +113,42 @@
             <state vertical-scroll-proportion="-17.75" vertical-offset="534" max-vertical-offset="2445">
               <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1407008224000" expanded="true" signature="31:4592" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="38:962" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="451:636" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="831:954" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="841:877" placeholder="{...}" />
+                <marker date="1407008224000" expanded="true" signature="969:4584" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="993:3668" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1035:1647" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1057:1638" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1087:1627" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1123:1614" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1169:1599" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1209:1582" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1333:1498" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1668:1781" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1696:1772" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1734:1748" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1802:2529" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1830:2159" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1871:2147" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="1959:2134" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2187:2519" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2228:2507" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2319:2494" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2550:3660" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2579:3651" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2635:3639" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2651:2921" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2664:2904" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2937:3624" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="2985:3605" placeholder="do ... end" />
+                <marker date="1407008224000" expanded="true" signature="3025:3570" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="3076:3170" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="3701:4574" placeholder="..." />
+                <marker date="1407008224000" expanded="true" signature="3795:3911" placeholder="[...]" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_formatter.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.1.0/gems/rspec-core-2.8.0/lib/rspec/core/formatters/base_formatter.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="2700">
-              <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="64" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +168,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
               <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding />
+              <folding>
+                <marker date="1407008989000" expanded="true" signature="93:1222" placeholder="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,8 +178,40 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42416453" vertical-offset="0" max-vertical-offset="778">
-              <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.9602649" vertical-offset="250" max-vertical-offset="1140">
+              <caret line="65" column="165" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rspec_html_formatter.gemspec" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rspec_html_formatter.gemspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1407011031000" expanded="true" signature="1982:2787" placeholder="if ... end" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="840">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,13 +230,14 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/penders_spec.rb" />
         <option value="$PROJECT_DIR$/templates/overview.erb" />
-        <option value="$PROJECT_DIR$/lib/rspec_html_formatter.rb" />
         <option value="$PROJECT_DIR$/spec/rspec_html_formatter_spec.rb" />
         <option value="$PROJECT_DIR$/templates/report.erb" />
         <option value="$PROJECT_DIR$/spec/test2_spec.rb" />
+        <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/lib/rspec_html_formatter.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -317,7 +417,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292978" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292978" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292978" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -376,14 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.4/lib/active_support/number_helper/number_converter.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2820">
@@ -437,16 +529,42 @@
         <state vertical-scroll-proportion="-17.75" vertical-offset="534" max-vertical-offset="2445">
           <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1407008224000" expanded="true" signature="31:4592" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="38:962" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="451:636" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="831:954" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="841:877" placeholder="{...}" />
+            <marker date="1407008224000" expanded="true" signature="969:4584" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="993:3668" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1035:1647" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1057:1638" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1087:1627" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1123:1614" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1169:1599" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1209:1582" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1333:1498" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1668:1781" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1696:1772" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1734:1748" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1802:2529" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1830:2159" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1871:2147" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="1959:2134" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2187:2519" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2228:2507" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2319:2494" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2550:3660" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2579:3651" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2635:3639" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2651:2921" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2664:2904" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2937:3624" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="2985:3605" placeholder="do ... end" />
+            <marker date="1407008224000" expanded="true" signature="3025:3570" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="3076:3170" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="3701:4574" placeholder="..." />
+            <marker date="1407008224000" expanded="true" signature="3795:3911" placeholder="[...]" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rspec_html_formatter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3135" max-vertical-offset="4185">
-          <caret line="250" column="52" selection-start-line="250" selection-start-column="52" selection-end-line="250" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -463,7 +581,53 @@
         <state vertical-scroll-proportion="-17.125" vertical-offset="2094" max-vertical-offset="2865">
           <caret line="167" column="37" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1407008771000" expanded="true" signature="31:5631" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="38:967" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="456:641" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="836:959" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="846:882" placeholder="{...}" />
+            <marker date="1407008771000" expanded="true" signature="974:5623" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="998:4707" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1040:1882" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1062:1873" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1092:1862" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1128:1849" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1174:1834" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1214:1587" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1338:1503" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1673:1816" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1715:1797" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1903:2021" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1931:2012" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="1969:1983" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2042:2771" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2070:2401" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2111:2389" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2202:2376" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2429:2761" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2470:2749" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2561:2736" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2792:4699" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2821:4690" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2877:4678" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2893:3039" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="2906:3022" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3055:4663" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3094:4644" placeholder="do ... end" />
+            <marker date="1407008771000" expanded="true" signature="3128:4628" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3181:4470" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3203:3781" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3226:3756" placeholder="if ... end" />
+            <marker date="1407008771000" expanded="true" signature="3321:3647" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3373:3492" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3541:3618" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3803:4450" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3826:4425" placeholder="if ... end" />
+            <marker date="1407008771000" expanded="true" signature="3909:4398" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="3961:4078" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="4127:4369" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="4740:5613" placeholder="..." />
+            <marker date="1407008771000" expanded="true" signature="4834:4950" placeholder="[...]" />
           </folding>
         </state>
       </provider>
@@ -472,14 +636,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <marker date="1407008989000" expanded="true" signature="93:1222" placeholder="do ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspec_html_formatter.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1407011031000" expanded="true" signature="1982:2787" placeholder="if ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="840">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rspec_html_formatter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3585">
+          <caret line="20" column="95" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42416453" vertical-offset="0" max-vertical-offset="778">
-          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.9602649" vertical-offset="250" max-vertical-offset="1140">
+          <caret line="65" column="165" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding />
         </state>
       </provider>
