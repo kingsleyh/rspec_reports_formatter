@@ -20,7 +20,7 @@ When running your rspec tests just use the custom formatter:
 (https://raw.githubusercontent.com/kingsleyh/rspec_reports_formatter/master/.README/rspec_reports_overview.png)
 
 ![example report]
-(https://github.com/kingsleyh/rspec_html_formatter/raw/master/.README/rspec_reports_report.png)
+(https://raw.githubusercontent.com/kingsleyh/rspec_reports_formatter/master/.README/rspec_reports_report.png)
 
 If you want to provide some generated documentation for the tests you can put comments in the rspec tests like this:
 

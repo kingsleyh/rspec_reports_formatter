@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="199a381f-a9d9-4f90-a9ad-740dfdff291e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rspec_html_formatter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,8 +112,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36632392" vertical-offset="0" max-vertical-offset="778">
-              <caret line="19" column="110" selection-start-line="19" selection-start-column="110" selection-end-line="19" selection-end-column="110" />
+            <state vertical-scroll-proportion="0.42416453" vertical-offset="0" max-vertical-offset="778">
+              <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -478,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36632392" vertical-offset="0" max-vertical-offset="778">
-          <caret line="19" column="110" selection-start-line="19" selection-start-column="110" selection-end-line="19" selection-end-column="110" />
+        <state vertical-scroll-proportion="0.42416453" vertical-offset="0" max-vertical-offset="778">
+          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
           <folding />
         </state>
       </provider>
