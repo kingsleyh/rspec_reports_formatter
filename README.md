@@ -17,7 +17,7 @@ When running your rspec tests just use the custom formatter:
 
 
 ![example overview report]
-(https://github.com/kingsleyh/rspec_html_formatter/raw/master/.README/rspec_reports_overview.png)
+(https://raw.githubusercontent.com/kingsleyh/rspec_reports_formatter/master/.README/rspec_reports_overview.png)
 
 ![example report]
 (https://github.com/kingsleyh/rspec_html_formatter/raw/master/.README/rspec_reports_report.png)
