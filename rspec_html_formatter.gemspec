@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
     ".README/rspec_reports_overview.png",
     ".README/rspec_reports_report.png",
     ".document",
+    ".idea/rspec_html_formatter.iml",
     ".idea/scopes/scope_settings.xml",
     ".idea/workspace.xml",
     ".rspec",
@@ -41,6 +42,7 @@ Gem::Specification.new do |s|
     "resources/bootstrap-3.2.0-dist/js/bootstrap.min.js",
     "resources/jquery-1.11.1.min.js",
     "resources/jscharts.js",
+    "rspec_html_formatter.gemspec",
     "spec/penders_spec.rb",
     "spec/rspec_html_formatter_spec.rb",
     "spec/test2_spec.rb",
@@ -56,27 +58,27 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rspec-core>, [">= 3.0.2"])
+      s.add_runtime_dependency(%q<rspec-core>, [">= 2.8.0"])
       s.add_runtime_dependency(%q<rouge>, [">= 1.6.1"])
       s.add_runtime_dependency(%q<activesupport>, [">= 4.1.4"])
-      s.add_development_dependency(%q<rspec>, ["~> 3.0.0"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 2.0.1"])
     else
-      s.add_dependency(%q<rspec-core>, [">= 3.0.2"])
+      s.add_dependency(%q<rspec-core>, [">= 2.8.0"])
       s.add_dependency(%q<rouge>, [">= 1.6.1"])
       s.add_dependency(%q<activesupport>, [">= 4.1.4"])
-      s.add_dependency(%q<rspec>, ["~> 3.0.0"])
+      s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
       s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
     end
   else
-    s.add_dependency(%q<rspec-core>, [">= 3.0.2"])
+    s.add_dependency(%q<rspec-core>, [">= 2.8.0"])
     s.add_dependency(%q<rouge>, [">= 1.6.1"])
     s.add_dependency(%q<activesupport>, [">= 4.1.4"])
-    s.add_dependency(%q<rspec>, ["~> 3.0.0"])
+    s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])
     s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
