@@ -1,18 +1,22 @@
 # Publish pretty [rspec](http://rspec.info/) reports
 
-This is a ruby Rspec custom formatter which generates pretty html reports showing the results of rspec tests. This gem was build to use Rspec 3.0.0. If you want to use it with older
-versions of Rspec then please use the 2.8.0 branch.
+This is a ruby Rspec custom formatter which generates pretty html reports showing the results of rspec tests. This gem was build to use Rspec 3.x.x If you want to use it with older
+versions of Rspec then you should use the rspec_reports_formatter 0.2.x (2.8.0 branch)
+
+* For Rspec 2.x.x please use rspec_reports_formatter version starting with 0.2.x
+* For Rspec 3.x.x please use the rspec_reports_formatter version starting with 0.3.x
+
 
 ## Install
 
 ```
-  gem install rspec_reports_formatter
+  gem install rspec_reports_formatter -v 0.3.0
 ```
 
 ideally just add it to your bundler Gemfile as follows:
 
 ```ruby
- gem 'rspec_reports_formatter'
+ gem 'rspec_reports_formatter','~> 0.3.0'
 ```
 
 ## Use
