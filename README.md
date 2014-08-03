@@ -9,13 +9,13 @@ versions of Rspec then you should use the rspec_reports_formatter 0.3.x (master)
 ## Install
 
 ```
-  gem install rspec_reports_formatter -v 0.2.0
+  gem install rspec_reports_formatter -v 0.2.1
 ```
 
 ideally just add it to your bundler Gemfile as follows:
 
 ```ruby
-  gem 'rspec-legacy_formatters', '~> 0.2.0'
+  gem 'rspec-legacy_formatters', '~> 0.2.1'
 ```
 
 ## Use
@@ -41,7 +41,7 @@ If you are using a more recent version of Rspec (3.0.0 onwards) but for some rea
 group :development do
   gem 'rspec','~> 3.0.0.rc1'
   gem 'bundler', '~> 1.0'
-  gem 'rspec-legacy_formatters', '~> 0.2.0'
+  gem 'rspec-legacy_formatters', '~> 0.2.1'
   gem 'rspec_html_formatter'
 end
 
