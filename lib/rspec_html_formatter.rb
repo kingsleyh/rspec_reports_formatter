@@ -57,9 +57,9 @@ class Example
     @description = example.description
     @full_description = example.full_description
     @execution_result = example.execution_result
-    @run_time = (@execution_result[:run_time]).round(5)
-    @duration = @execution_result[:run_time].to_s(:rounded, precision: 5)
-    @status = @execution_result[:status].to_s
+    @run_time = (@execution_result.run_time).round(5)
+    @duration = @execution_result.run_time.to_s(:rounded, precision: 5)
+    @status = @execution_result.status.to_s
     @metadata = example.metadata
     @file_path = @metadata[:file_path]
     @exception = Oopsy.new(example.exception, @file_path)
@@ -111,6 +111,8 @@ end
 
 class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
 
+  RSpec::Core::Formatters.register self, :example_started, :example_passed, :example_failed, :example_pending, :example_group_finished
+
   REPORT_PATH = './rspec_html_reports'
 
   def initialize(io_standard_out)
@@ -120,7 +122,7 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
     @all_groups = {}
   end
 
-  def example_group_started(example_group)
+  def example_group_started(notification)
     @example_group = {}
     @group_examples = []
     @group_example_count = 0
@@ -129,27 +131,27 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
     @group_example_pending_count = 0
   end
 
-  def example_started(example)
+  def example_started(notification)
     @group_example_count += 1
   end
 
-  def example_passed(example)
+  def example_passed(notification)
     @group_example_success_count += 1
-    @group_examples << Example.new(example)
+    @group_examples << Example.new(notification.example)
   end
 
-  def example_failed(example)
+  def example_failed(notification)
     @group_example_failure_count += 1
-    @group_examples << Example.new(example)
+    @group_examples << Example.new(notification.example)
   end
 
-  def example_pending(example)
+  def example_pending(notification)
     @group_example_pending_count += 1
-    @group_examples << Example.new(example)
+    @group_examples << Example.new(notification.example)
   end
 
-  def example_group_finished(example_group)
-    File.open("#{REPORT_PATH}/#{example_group.description.parameterize}.html", 'w') do |f|
+  def example_group_finished(notification)
+    File.open("#{REPORT_PATH}/#{notification.group.description.parameterize}.html", 'w') do |f|
 
       @passed = @group_example_success_count
       @failed = @group_example_failure_count
@@ -163,7 +165,7 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
         duration_keys = duration_keys << 1
       end
 
-      @title = example_group.description
+      @title = notification.group.description
       @durations = duration_keys.zip(duration_values)
       @summary_duration = duration_values.inject(0) { |sum, i| sum + i }.to_s(:rounded, precision: 5)
       @examples = Specify.new(@group_examples).process
@@ -171,8 +173,8 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
       class_map = {passed: 'success', failed: 'danger', pending: 'warning'}
       statuses = @examples.map { |e| e.status }
       status = statuses.include?('failed') ? 'failed' : (statuses.include?('passed') ? 'passed' : 'pending')
-      @all_groups[example_group.description.parameterize] = {
-          group: example_group.description,
+      @all_groups[notification.group.description.parameterize] = {
+          group: notification.group.description,
           examples: @examples.size,
           status: status,
           klass: class_map[status.to_sym],
@@ -190,7 +192,7 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
 
   end
 
-  def close
+  def close(notification)
     File.open("#{REPORT_PATH}/overview.html", 'w') do |f|
       @overview = @all_groups
 

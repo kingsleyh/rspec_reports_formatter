@@ -5,22 +5,23 @@ describe 'The second Test' do
 
   it 'should do cool test stuff' do
     pending('coming soon')
+    fail
   end
 
   it 'should do amazing test stuff' do
-    'boats'.should == 'boats'
+    expect('boats').to eq 'boats'
   end
 
   it 'should do superb test stuff' do
     #-> Given there are some ships
     #-> When I sail one
     #-> Then it should go fast
-    'ships'.should == 'ships'
+    expect('ships').to eq 'ships'
   end
 
   it 'should do example stuff' do
-    'apple'.should == 'apple'
-    'pear'.should == 1
+    expect('apple').to eq 'apple'
+    expect('pear').to eq 1
     #-> Given I have some stuff to do
     #-> And I like to do is wait here for a while
     #-> Then I do it real good!!
@@ -28,28 +29,29 @@ describe 'The second Test' do
 
   it 'should do very cool test stuff' do
     #-> Given I have some cars
-    'cars'.should == 'cars'
+    expect('cars').to eq 'cars'
     #-> And I drive one of them
-    'diesel'.should == 'diesels'
+    expect('diesel').to eq 'diesels'
     #-> Then I should go fast
-    'apple'.should == 'apple'
+    expect('apple').to eq 'apple'
   end
 
   it 'should do very amazing test stuff' do
-    'boats'.should == 'boats'
+    expect('boats').to eq 'boats'
   end
 
   it 'should do very superb test stuff' do
-    'ships'.should == 'ships'
+    expect('ships').to eq 'ships'
   end
 
   it 'should do very rawesome test stuff' do
         #-> Given I have some cars
     pending('give me a woop')
+    fail
   end
 
   it 'should do insane and cool test stuff' do
-    'ships'.should == 'ships'
+    expect('ships').to eq 'ships'
    end
 
 

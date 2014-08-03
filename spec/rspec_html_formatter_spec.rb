@@ -4,7 +4,7 @@ require 'rspec'
 describe 'RspecHtmlFormatter' do
 
   it 'should do example stuff' do
-    'apple'.should == 'apple'
+    expect('apple').to eq 'apple'
   end
 
 end
