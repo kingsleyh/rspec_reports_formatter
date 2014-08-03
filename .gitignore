@@ -1,6 +1,7 @@
 # rcov generated
 coverage
 coverage.data
+rspec_html_reports/
 
 .idea
 # rdoc generated
