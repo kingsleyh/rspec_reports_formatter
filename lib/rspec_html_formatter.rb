@@ -5,6 +5,7 @@ require 'active_support/inflector'
 require 'fileutils'
 require 'rouge'
 require 'erb'
+require 'rbconfig'
 
 I18n.enforce_available_locales = false
 
@@ -26,10 +27,34 @@ class Oopsy
 
   private
 
+def os
+    @os ||= (
+      host_os = RbConfig::CONFIG['host_os']
+      case host_os
+      when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
+        :windows
+      when /darwin|mac os/
+        :macosx
+      when /linux/
+        :linux
+      when /solaris|bsd/
+        :unix
+      else
+        raise Exception, "unknown os: #{host_os.inspect}"
+      end
+    )
+  end
+
   def process_source
     data = @backtrace_message.split(':')
-    file_path = data.first
-    line_number = data[1].to_i
+    unless data.empty?
+    if os == :windows
+      file_path = data[0] + ':' + data[1]
+      line_number = data[2].to_i
+    else
+       file_path = data.first
+       line_number = data[1].to_i
+    end
     lines = File.readlines(file_path)
     start_line = line_number-2
     end_line = line_number+3
@@ -37,8 +62,8 @@ class Oopsy
 
     formatter = Rouge::Formatters::HTML.new(css_class: 'highlight', line_numbers: true, start_line: start_line+1)
     lexer = Rouge::Lexers::Ruby.new
-    formatter.format(lexer.lex(source))
-
+    formatter.format(lexer.lex(source.encode('utf-8')))
+    end 
   end
 
   def process_message
@@ -160,13 +185,14 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
       duration_values = @group_examples.map { |e| e.run_time }
 
       duration_keys = duration_values.size.times.to_a
-      if duration_values.size < 2
+      if duration_values.size < 2 and duration_values.size > 0
         duration_values.unshift(duration_values.first)
         duration_keys = duration_keys << 1
       end
 
       @title = notification.group.description
       @durations = duration_keys.zip(duration_values)
+
       @summary_duration = duration_values.inject(0) { |sum, i| sum + i }.to_s(:rounded, precision: 5)
       @examples = Specify.new(@group_examples).process
 
