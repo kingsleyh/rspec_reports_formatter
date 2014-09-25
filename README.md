@@ -10,13 +10,13 @@ versions of Rspec then you should use the rspec_reports_formatter 0.2.x (2.8.0 b
 ## Install
 
 ```
-  gem install rspec_html_formatter -v 0.3.0
+  gem install rspec_html_formatter -v 0.3.1
 ```
 
 ideally just add it to your bundler Gemfile as follows:
 
 ```ruby
- gem 'rspec_html_formatter','~> 0.3.0'
+ gem 'rspec_html_formatter','~> 0.3.1'
 ```
 
 ## Use
