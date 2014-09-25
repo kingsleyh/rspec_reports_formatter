@@ -9,13 +9,13 @@ versions of Rspec then you should use the rspec_reports_formatter 0.3.x (master)
 ## Install
 
 ```
-  gem install rspec_reports_formatter -v 0.2.1
+  gem install rspec_reports_formatter -v 0.2.2
 ```
 
 ideally just add it to your bundler Gemfile as follows:
 
 ```ruby
-  gem 'rspec-legacy_formatters', '~> 0.2.1'
+  gem 'rspec-legacy_formatters', '~> 0.2.2'
 ```
 
 ## Use
