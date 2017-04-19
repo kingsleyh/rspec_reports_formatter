@@ -138,7 +138,7 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
 
   RSpec::Core::Formatters.register self, :example_started, :example_passed, :example_failed, :example_pending, :example_group_finished
 
-  REPORT_PATH = './rspec_html_reports'
+  REPORT_PATH = ENV['REPORT_PATH'] || './rspec_html_reports'
 
   def initialize(io_standard_out)
     create_reports_dir
