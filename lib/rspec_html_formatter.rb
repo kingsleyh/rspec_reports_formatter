@@ -27,7 +27,7 @@ class Oopsy
 
   private
 
-def os
+  def os
     @os ||= (
       host_os = RbConfig::CONFIG['host_os']
       case host_os
@@ -63,7 +63,7 @@ def os
     formatter = Rouge::Formatters::HTML.new(css_class: 'highlight', line_numbers: true, start_line: start_line+1)
     lexer = Rouge::Lexers::Ruby.new
     formatter.format(lexer.lex(source.encode('utf-8')))
-    end 
+    end
   end
 
   def process_message
@@ -76,7 +76,7 @@ end
 
 class Example
 
-  attr_reader :description, :full_description, :run_time, :duration, :status, :exception, :file_path, :metadata, :spec
+  attr_reader :description, :full_description, :run_time, :duration, :status, :exception, :file_path, :metadata, :spec, :screenshots, :screenrecord
 
   def initialize(example)
     @description = example.description
@@ -89,6 +89,8 @@ class Example
     @file_path = @metadata[:file_path]
     @exception = Oopsy.new(example.exception, @file_path)
     @spec = nil
+    @screenshots = @metadata[:screenshots]
+    @screenrecord = @metadata[:screenrecord]
   end
 
   def has_exception?
@@ -97,6 +99,14 @@ class Example
 
   def has_spec?
     !@spec.nil?
+  end
+
+  def has_screenshots?
+    !@screenshots.nil? && !@screenshots.empty?
+  end
+
+  def has_screenrecord?
+    !@screenrecord.nil?
   end
 
   def set_spec(spec)
@@ -145,15 +155,21 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
     create_resources_dir
     copy_resources
     @all_groups = {}
+
+    @group_level = 0
   end
 
   def example_group_started(notification)
-    @example_group = {}
-    @group_examples = []
-    @group_example_count = 0
-    @group_example_success_count = 0
-    @group_example_failure_count = 0
-    @group_example_pending_count = 0
+    if @group_level == 0
+      @example_group = {}
+      @group_examples = []
+      @group_example_count = 0
+      @group_example_success_count = 0
+      @group_example_failure_count = 0
+      @group_example_pending_count = 0
+    end
+
+    @group_level += 1
   end
 
   def example_started(notification)
@@ -176,46 +192,48 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
   end
 
   def example_group_finished(notification)
-    File.open("#{REPORT_PATH}/#{notification.group.description.parameterize}.html", 'w') do |f|
+    @group_level -= 1
 
-      @passed = @group_example_success_count
-      @failed = @group_example_failure_count
-      @pending = @group_example_pending_count
+    if @group_level == 0
+      File.open("#{REPORT_PATH}/#{notification.group.description.parameterize}.html", 'w') do |f|
 
-      duration_values = @group_examples.map { |e| e.run_time }
+        @passed = @group_example_success_count
+        @failed = @group_example_failure_count
+        @pending = @group_example_pending_count
 
-      duration_keys = duration_values.size.times.to_a
-      if duration_values.size < 2 and duration_values.size > 0
-        duration_values.unshift(duration_values.first)
-        duration_keys = duration_keys << 1
+        duration_values = @group_examples.map { |e| e.run_time }
+
+        duration_keys = duration_values.size.times.to_a
+        if duration_values.size < 2 and duration_values.size > 0
+          duration_values.unshift(duration_values.first)
+          duration_keys = duration_keys << 1
+        end
+
+        @title = notification.group.description
+        @durations = duration_keys.zip(duration_values)
+
+        @summary_duration = duration_values.inject(0) { |sum, i| sum + i }.to_s(:rounded, precision: 5)
+        @examples = Specify.new(@group_examples).process
+
+        class_map = {passed: 'success', failed: 'danger', pending: 'warning'}
+        statuses = @examples.map { |e| e.status }
+        status = statuses.include?('failed') ? 'failed' : (statuses.include?('passed') ? 'passed' : 'pending')
+        @all_groups[notification.group.description.parameterize] = {
+            group: notification.group.description,
+            examples: @examples.size,
+            status: status,
+            klass: class_map[status.to_sym],
+            passed: statuses.select { |s| s == 'passed' },
+            failed: statuses.select { |s| s == 'failed' },
+            pending: statuses.select { |s| s == 'pending' },
+            duration: @summary_duration
+        }
+
+        template_file = File.read(File.dirname(__FILE__) + '/../templates/report.erb')
+
+        f.puts ERB.new(template_file).result(binding)
       end
-
-      @title = notification.group.description
-      @durations = duration_keys.zip(duration_values)
-
-      @summary_duration = duration_values.inject(0) { |sum, i| sum + i }.to_s(:rounded, precision: 5)
-      @examples = Specify.new(@group_examples).process
-
-      class_map = {passed: 'success', failed: 'danger', pending: 'warning'}
-      statuses = @examples.map { |e| e.status }
-      status = statuses.include?('failed') ? 'failed' : (statuses.include?('passed') ? 'passed' : 'pending')
-      @all_groups[notification.group.description.parameterize] = {
-          group: notification.group.description,
-          examples: @examples.size,
-          status: status,
-          klass: class_map[status.to_sym],
-          passed: statuses.select { |s| s == 'passed' },
-          failed: statuses.select { |s| s == 'failed' },
-          pending: statuses.select { |s| s == 'pending' },
-          duration: @summary_duration
-      }
-
-      template_file = File.read(File.dirname(__FILE__) + '/../templates/report.erb')
-
-      f.puts ERB.new(template_file).result(binding)
-
     end
-
   end
 
   def close(notification)

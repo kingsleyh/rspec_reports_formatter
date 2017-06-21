@@ -7,8 +7,8 @@
   <title>Rspec HTML Reports - <%= @title %></title>
 
   <!-- Bootstrap -->
-  <link href="resources/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="resources/bootstrap-3.2.0-dist/css/bootstrap-theme-yeti.min.css" rel="stylesheet">
+  <link href="resources/bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="resources/bootstrap-4.0.0-dist/themes/bootstrap-theme-yeti.min.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -16,7 +16,7 @@
   <![endif]-->
 
   <script src="resources/jquery-1.11.1.min.js"></script>
-  <script src="resources/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+  <script src="resources/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
   <script src="resources/jscharts.js"></script>
   <style>
       * {
@@ -108,16 +108,51 @@
         <tbody>
         <% @examples.each_with_index do |example, i| %>
             <tr>
-              <td><%= i+1 %></td>
+              <td id="example_<%= i+1 %>"><%= i+1 %></td>
               <td>
                 <div>
-                  <% if example.has_spec? %>
+                  <% if example.has_spec? or example.has_screenshots? or example.has_screenrecord? %>
                       <div class="panel <%= example.klass('panel-') %>">
                         <div class="panel-heading">
-                          <h3 class="panel-title"> <%= example.full_description %></h3>
+                          <h3 class="panel-title pull-left"> <%= example.full_description %></h3>
+                          <% if example.has_screenrecord? %>
+                            <a href="#example_<%= i+1 %>" class="btn  pull-right" onclick="toggler('screenrecord_<%= i+1 %>');">Screen Record</a>
+                          <% end %>
+                          <% if example.has_screenshots? %>
+                            <a href="#example_<%= i+1 %>" class="btn pull-right" onclick="toggler('screenshots_<%= i+1 %>');">Screen Shots</a>
+                          <% end %>
+                          <div class="clearfix"></div>
                         </div>
                         <div class="panel-body">
-                          <%= example.spec %>
+                          <% if example.has_spec? %>
+                            <%= example.spec %>
+                          <% end %>
+                          <% if example.has_screenshots? %>
+                            <div id="screenshots_<%= i+1 %>" style="display:none">
+                            <% example.screenshots.each do |screenshot| %>
+                              <div class="col-md-4">
+                                <div class="thumbnail">
+                                  <a href=<%= screenshot[:path] %> target="_blank">
+                                    <img src=<%= screenshot[:path] %> alt="Lights" style="width:50%,height:50%">
+                                    <div class="caption">
+                                      <p><%= screenshot[:caption] %></p>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            <% end %>
+                          </div>
+                          <% end %>
+                          <% if example.has_screenrecord? %>
+                            <div id="screenrecord_<%= i+1 %>" style="display:none">
+                              <div class="col-md-4">
+                                <video controls width="250">
+                                  <source src=<%= example.screenrecord %> type="video/mp4">
+                                  Your browser does not support HTML5 video.
+                                </video>
+                              </div>
+                            </div>
+                          <% end %>
                         </div>
                       </div>
                   <% else %>
@@ -126,7 +161,6 @@
                 </div>
                 <div>
                   <% if example.has_exception? %>
-
                       <div class="panel panel-danger">
                         <div class="panel-heading">
                           <h3 class="panel-title"><%= example.exception.klass %></h3>
@@ -137,7 +171,6 @@
                           <%= example.exception.highlighted_source %>
                         </div>
                       </div>
-
                   <% end %>
                 </div>
               </td>
@@ -179,6 +212,10 @@
     myChart2.setAxisNameY('');
     myChart2.setAxisValuesNumberX(1);
     myChart2.draw();
+
+    function toggler(divId) {
+      $("#" + divId).toggle();
+    }
 </script>
 
 
