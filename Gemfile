@@ -1,5 +1,5 @@
-source "http://rubygems.org"
-# Add dependencies required to use your gem here.
+source 'http://rubygems.org'
+
 gem 'rspec-core', '>= 3.0.3'
 gem 'rouge', '1.6.1'
 gem 'activesupport', '>= 4.1.4'
