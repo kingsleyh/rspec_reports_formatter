@@ -153,6 +153,8 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
   def initialize(io_standard_out)
     create_reports_dir
     create_resources_dir
+    create_screenshots_dir
+    create_screenrecords_dir
     copy_resources
     @all_groups = {}
 
@@ -269,6 +271,16 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
 
   def create_resources_dir
     file_path = REPORT_PATH + '/resources'
+    FileUtils.mkdir_p file_path unless File.exists?(file_path)
+  end
+
+  def create_screenshots_dir
+    file_path = REPORT_PATH + '/screenshots'
+    FileUtils.mkdir_p file_path unless File.exists?(file_path)
+  end
+
+  def create_screenrecords_dir
+    file_path = REPORT_PATH + '/screenrecords'
     FileUtils.mkdir_p file_path unless File.exists?(file_path)
   end
 

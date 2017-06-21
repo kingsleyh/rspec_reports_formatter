@@ -58,17 +58,17 @@
   </div>
 
   <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-4">
+        <div class="panel panel-default">
 
-    <div class="col-md-4">
-      <div class="panel panel-default">
-
-        <div class="panel-heading">Group Summary</div>
-        <div class="panel-body">
-          <span class="pull-right"><%= @total_examples %> Examples</span>
-          <canvas id="pieChart" width="300" height="300"></canvas>
+          <div class="panel-heading">Group Summary</div>
+          <div class="panel-body">
+            <span class="pull-right"><%= @total_examples %> Examples</span>
+            <canvas id="pieChart" width="300" height="300"></canvas>
+          </div>
         </div>
       </div>
-
     </div>
 
   <div class="row">
@@ -88,9 +88,8 @@
         <% @examples.each_with_index do |example, i| %>
             <tr>
               <td id="example_<%= i+1 %>"><%= i+1 %></td>
-              <td>
+              <td width="100%">
                 <div>
-                  <% if example.has_spec? or example.has_screenshots? or example.has_screenrecord? %>
                       <div class="panel <%= example.klass('panel-') %>">
                         <div class="panel-heading">
                           <h3 class="panel-title pull-left"> <%= example.full_description %></h3>
@@ -102,12 +101,19 @@
                           <% end %>
                           <div class="clearfix"></div>
                         </div>
-                        <div class="panel-body">
+
+
+                        <% if example.has_spec? or example.has_screenshots? or example.has_screenrecord? %>
+                        <!-- SPEC BLOCK -->
                           <% if example.has_spec? %>
-                            <%= example.spec %>
+                            <div class="panel-body">
+                              <%= example.spec %>
+                            </div>
                           <% end %>
+
+                        <!--  SCREENSHOT BLOCK -->
                           <% if example.has_screenshots? %>
-                            <div id="screenshots_<%= i+1 %>" style="display:none">
+                            <div id="screenshots_<%= i+1 %>" class="panel-body" style="display:none">
                             <% example.screenshots.each do |screenshot| %>
                               <div class="col-md-4">
                                 <div class="thumbnail">
@@ -122,8 +128,10 @@
                             <% end %>
                           </div>
                           <% end %>
+
+                          <!--  SCREENRECORD BLOCK -->
                           <% if example.has_screenrecord? %>
-                            <div id="screenrecord_<%= i+1 %>" style="display:none">
+                            <div id="screenrecord_<%= i+1 %>" class="panel-body" style="display:none">
                               <div class="col-md-4">
                                 <video controls width="250">
                                   <source src=<%= example.screenrecord %> type="video/mp4">
@@ -133,10 +141,9 @@
                             </div>
                           <% end %>
                         </div>
+
+                        <% end %>
                       </div>
-                  <% else %>
-                      <%= example.full_description %>
-                  <% end %>
                 </div>
                 <div>
                   <% if example.has_exception? %>
@@ -177,9 +184,9 @@
         data: [<%= @passed %>, <%= @failed %>, <%= @pending %>],
 
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)'
+          '#3c9a5f',
+          '#ea2f10',
+          '#e99002'
         ],
         borderColor: [
           'rgba(255,99,132,1)',
@@ -192,7 +199,7 @@
   });
 
   function toggler(divId) {
-    $("#" + divId).toggle();
+    $("#" + divId).slideToggle();
   }
 </script>
 
