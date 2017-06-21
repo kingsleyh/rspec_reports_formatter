@@ -1,5 +1,4 @@
 require 'rspec'
-require_relative '../lib/rspec_html_formatter'
 
 describe 'Embed Graphics' do
   context 'Screenshots' do

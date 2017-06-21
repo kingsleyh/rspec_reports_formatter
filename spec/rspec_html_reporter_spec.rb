@@ -1,7 +1,6 @@
 require 'rspec'
-# require_relative '../lib/rspec_html_formatter'
 
-describe 'The second Test' do
+describe 'RSpec HTML Reporter' do
 
   it 'should do cool test stuff' do
     pending('coming soon')
@@ -45,7 +44,7 @@ describe 'The second Test' do
   end
 
   it 'should do very rawesome test stuff' do
-        #-> Given I have some cars
+    #-> Given I have some cars
     pending('give me a woop')
     fail
   end
@@ -53,6 +52,4 @@ describe 'The second Test' do
   it 'should do insane and cool test stuff' do
     expect('ships').to eq 'ships'
    end
-
-
 end
