@@ -63,7 +63,7 @@
 
         <div class="panel-heading">Group Summary</div>
         <div class="panel-body">
-          <span class="pull-right label-primary"><%= @total_examples %> Examples</span>
+          <span class="pull-right"><%= @total_examples %> Examples</span>
           <canvas id="pieChart" width="300" height="300"></canvas>
         </div>
       </div>
@@ -115,30 +115,24 @@
   var pieCtx = document.getElementById("pieChart");
 
   var pieChart = new Chart(pieCtx, {
-    type: 'pie',
+    type: 'doughnut',
     data: {
         labels: ["Passed", "Failed", "Pending"],
         datasets: [{
-            label: 'Examples',
-            data: [<%= @passed %>, <%= @failed %>, <%= @pending %>],
+          label: 'Examples',
+          data: [<%= @passed %>, <%= @failed %>, <%= @pending %>],
 
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-                // 'rgba(75, 192, 192, 0.2)',
-                // 'rgba(153, 102, 255, 0.2)',
-                // 'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
-                // 'rgba(75, 192, 192, 1)',
-                // 'rgba(153, 102, 255, 1)',
-                // 'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)'
+          ],
+          borderWidth: 1
         }]
     },
   });

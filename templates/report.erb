@@ -64,7 +64,7 @@
 
         <div class="panel-heading">Group Summary</div>
         <div class="panel-body">
-          <span class="pull-right label-primary"><%= @total_examples %> Examples</span>
+          <span class="pull-right"><%= @total_examples %> Examples</span>
           <canvas id="pieChart" width="300" height="300"></canvas>
         </div>
       </div>
@@ -169,7 +169,7 @@
   var pieCtx = document.getElementById("pieChart");
 
   var pieChart = new Chart(pieCtx, {
-    type: 'pie',
+    type: 'doughnut',
     data: {
       labels: ["Passed", "Failed", "Pending"],
       datasets: [{
