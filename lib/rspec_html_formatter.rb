@@ -19,7 +19,7 @@ class Oopsy
       @klass = @exception.class
       @message = @exception.message.encode('utf-8')
       @backtrace = @exception.backtrace
-      @backtrace_message = @backtrace.select { |r| r.match(@file_path) }.join('').encode('utf-8')
+      @backtrace_message = @backtrace.nil? ? '' : @backtrace.select { |r| r.match(@file_path) }.join('').encode('utf-8')
       @highlighted_source = process_source
       @explanation = process_message
     end
@@ -76,7 +76,7 @@ end
 
 class Example
 
-  attr_reader :description, :full_description, :run_time, :duration, :status, :exception, :file_path, :metadata, :spec, :screenshots, :screenrecord
+  attr_reader :description, :full_description, :run_time, :duration, :status, :exception, :file_path, :metadata, :spec, :screenshots, :screenrecord, :failed_screenshot
 
   def initialize(example)
     @description = example.description
@@ -91,6 +91,7 @@ class Example
     @spec = nil
     @screenshots = @metadata[:screenshots]
     @screenrecord = @metadata[:screenrecord]
+    @failed_screenshot = @metadata[:failed_screenshot]
   end
 
   def has_exception?
@@ -107,6 +108,10 @@ class Example
 
   def has_screenrecord?
     !@screenrecord.nil?
+  end
+
+  def has_failed_screenshot?
+    !@failed_screenshot.nil?
   end
 
   def set_spec(spec)
