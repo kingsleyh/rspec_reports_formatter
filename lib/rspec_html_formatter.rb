@@ -76,9 +76,10 @@ end
 
 class Example
 
-  attr_reader :description, :full_description, :run_time, :duration, :status, :exception, :file_path, :metadata, :spec, :screenshots, :screenrecord, :failed_screenshot
+  attr_reader :example_group, :description, :full_description, :run_time, :duration, :status, :exception, :file_path, :metadata, :spec, :screenshots, :screenrecord, :failed_screenshot
 
   def initialize(example)
+    @example_group = example.example_group.to_s
     @description = example.description
     @full_description = example.full_description
     @execution_result = example.execution_result
@@ -92,6 +93,13 @@ class Example
     @screenshots = @metadata[:screenshots]
     @screenrecord = @metadata[:screenrecord]
     @failed_screenshot = @metadata[:failed_screenshot]
+  end
+
+  def example_title
+    title_arr = @example_group.to_s.split('::') - ['RSpec', 'ExampleGroups']
+    title_arr.push @description
+
+    title_arr.join(' → ')
   end
 
   def has_exception?

@@ -94,7 +94,7 @@
                 <div>
                       <div class="panel <%= example.klass('panel-') %>">
                         <div class="panel-heading">
-                          <h3 class="panel-title pull-left"> <%= example.full_description %></h3>
+                          <h3 class="panel-title pull-left"> <%= example.example_title %></h3>
                           <% if example.has_screenrecord? %>
                             <a href="#example_<%= i+1 %>" class="btn btn-xs btn-default spacer pull-right" onclick="toggler('screenrecord_<%= i+1 %>');">Screen Record</a>
                           <% end %>
