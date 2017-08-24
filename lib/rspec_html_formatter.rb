@@ -159,13 +159,17 @@ end
 
 class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
 
-  RSpec::Core::Formatters.register self, :example_started, :example_passed, :example_failed, :example_pending, :example_group_finished
+  DEFAULT_REPORT_PATH = File.join(Bundler.root, 'reports', Time.now.strftime('%Y%m%d-%H%M%S'))
+  REPORT_PATH = ENV['REPORT_PATH'] || DEFAULT_REPORT_PATH
 
-  REPORT_PATH = ENV['REPORT_PATH'] || './rspec_html_reports'
+  SCREENRECORD_DIR = File.join(REPORT_PATH, 'screenrecords')
+  SCREENSHOT_DIR   = File.join(REPORT_PATH, 'screenshots')
+  RESOURCE_DIR     = File.join(REPORT_PATH, 'resources')
+
+  RSpec::Core::Formatters.register self, :example_started, :example_passed, :example_failed, :example_pending, :example_group_finished
 
   def initialize(io_standard_out)
     create_reports_dir
-    create_resources_dir
     create_screenshots_dir
     create_screenrecords_dir
     copy_resources
@@ -275,26 +279,18 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
     end
   end
 
-
   private
   def create_reports_dir
     FileUtils.rm_rf(REPORT_PATH) if File.exists?(REPORT_PATH)
     FileUtils.mkpath(REPORT_PATH)
   end
 
-  def create_resources_dir
-    file_path = REPORT_PATH + '/resources'
-    FileUtils.mkdir_p file_path unless File.exists?(file_path)
-  end
-
   def create_screenshots_dir
-    file_path = REPORT_PATH + '/screenshots'
-    FileUtils.mkdir_p file_path unless File.exists?(file_path)
+    FileUtils.mkdir_p SCREENSHOT_DIR unless File.exists?(SCREENSHOT_DIR)
   end
 
   def create_screenrecords_dir
-    file_path = REPORT_PATH + '/screenrecords'
-    FileUtils.mkdir_p file_path unless File.exists?(file_path)
+    FileUtils.mkdir_p SCREENRECORD_DIR unless File.exists?(SCREENRECORD_DIR)
   end
 
   def copy_resources
