@@ -1,4 +1,6 @@
-# PLEASE NOTE - This project is not being actively maintained at the moment - I am taking a break - not sure when I will return.
+# PLEASE NOTE - This project is not being actively maintained at the moment - I am taking a break - not sure when I will return.I'm unlikely to do do any more work on this project but will leave it here for posterity.
+
+* Please consider using a fork of this project such as [fork](https://github.com/vbanthia/rspec_html_reporter)
 
 # Publish pretty [rspec](http://rspec.info/) reports
 
