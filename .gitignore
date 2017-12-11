@@ -2,8 +2,6 @@
 coverage
 coverage.data
 
-.idea
-rspec_html_reports
 # rdoc generated
 rdoc
 
@@ -27,3 +25,9 @@ pkg
 
 # docs
 docs/
+
+# Reports
+reports/
+
+# Bundler
+vendor
