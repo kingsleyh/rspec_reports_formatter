@@ -23,9 +23,6 @@ pkg
 # For rubinius:
 #*.rbc
 
-# docs
-docs/
-
 # Reports
 reports/
 
